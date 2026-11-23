@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dicas | TripInsight</title>
+
+    <link rel="stylesheet" href="../css/dicas.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <span class="aviao">✈</span>
+            <h1>TripInsight</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#">Destinos</a>
+            <a href="experiencias.html">Experiências</a>
+            <a href="dicas.html" class="ativo">Dicas</a>
+        </nav>
+
+        <div class="header-acoes">
+
+            <button
+                class="perfil-btn"
+                onclick="window.location.href='perfil.html'">
+                Perfil
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <!-- TOPO -->
+
+        <section class="topo">
+
+            <p class="caminho">
+                Início / Dicas
+            </p>
+
+            <h2>
+                Dicas para viajar melhor
+            </h2>
+
+            <p class="descricao">
+                Encontre dicas para economizar, organizar sua viagem
+                e aproveitar melhor cada destino.
+            </p>
+
+        </section>
+
+
+        <!-- PESQUISA -->
+
+        <section class="pesquisa">
+
+            <input
+                type="text"
+                id="pesquisaDica"
+                placeholder="Pesquise uma dica...">
+
+            <button id="buscarDica">
+                Buscar
+            </button>
+
+        </section>
+
+
+        <!-- CATEGORIAS -->
+
+        <section class="categorias">
+
+            <button class="categoria ativo" data-categoria="todas">
+                Todas
+            </button>
+
+            <button class="categoria" data-categoria="economia">
+                Economia
+            </button>
+
+            <button class="categoria" data-categoria="hospedagem">
+                Hospedagem
+            </button>
+
+            <button class="categoria" data-categoria="transporte">
+                Transporte
+            </button>
+
+            <button class="categoria" data-categoria="planejamento">
+                Planejamento
+            </button>
+
+        </section>
+
+
+        <!-- DICAS -->
+
+        <section class="lista-dicas">
+
+            <div
+                class="card-dica"
+                data-categoria="economia"
+                data-titulo="Como economizar durante a viagem">
+
+                <div class="icone">
+                    R$
+                </div>
+
+                <span class="categoria-card">
+                    Economia
+                </span>
+
+                <h3>
+                    Como economizar durante a viagem
+                </h3>
+
+                <p>
+                    Organize seus gastos antes de viajar e defina
+                    um limite para alimentação, transporte e passeios.
+                </p>
+
+                <a href="#">
+                    Ler dica →
+                </a>
+
+            </div>
+
+
+            <div
+                class="card-dica"
+                data-categoria="hospedagem"
+                data-titulo="Como economizar na hospedagem">
+
+                <div class="icone">
+                    H
+                </div>
+
+                <span class="categoria-card">
+                    Hospedagem
+                </span>
+
+                <h3>
+                    Como economizar na hospedagem
+                </h3>
+
+                <p>
+                    Compare preços, localização e avaliações antes
+                    de escolher onde ficar.
+                </p>
+
+                <a href="#">
+                    Ler dica →
+                </a>
+
+            </div>
+
+
+            <div
+                class="card-dica"
+                data-categoria="transporte"
+                data-titulo="Economizando no transporte">
+
+                <div class="icone">
+                    T
+                </div>
+
+                <span class="categoria-card">
+                    Transporte
+                </span>
+
+                <h3>
+                    Economizando no transporte
+                </h3>
+
+                <p>
+                    Pesquise diferentes formas de chegar ao destino
+                    e compare os preços antes de comprar.
+                </p>
+
+                <a href="#">
+                    Ler dica →
+                </a>
+
+            </div>
+
+
+            <div
+                class="card-dica"
+                data-categoria="planejamento"
+                data-titulo="Planeje seus gastos">
+
+                <div class="icone">
+                    P
+                </div>
+
+                <span class="categoria-card">
+                    Planejamento
+                </span>
+
+                <h3>
+                    Planeje seus gastos
+                </h3>
+
+                <p>
+                    Faça uma estimativa dos principais gastos da viagem
+                    para evitar surpresas durante o passeio.
+                </p>
+
+                <a href="#">
+                    Ler dica →
+                </a>
+
+            </div>
+
+
+            <div
+                class="card-dica"
+                data-categoria="planejamento"
+                data-titulo="O que levar na viagem">
+
+                <div class="icone">
+                    ✓
+                </div>
+
+                <span class="categoria-card">
+                    Planejamento
+                </span>
+
+                <h3>
+                    O que levar na viagem
+                </h3>
+
+                <p>
+                    Monte uma lista com documentos, roupas, produtos
+                    pessoais e outros itens importantes.
+                </p>
+
+                <a href="#">
+                    Ler dica →
+                </a>
+
+            </div>
+
+
+            <div
+                class="card-dica"
+                data-categoria="economia"
+                data-titulo="Compare preços antes de comprar">
+
+                <div class="icone">
+                    %
+                </div>
+
+                <span class="categoria-card">
+                    Economia
+                </span>
+
+                <h3>
+                    Compare preços antes de comprar
+                </h3>
+
+                <p>
+                    Pesquisar diferentes opções pode ajudar você a
+                    encontrar preços melhores para sua viagem.
+                </p>
+
+                <a href="#">
+                    Ler dica →
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <p id="nenhumaDica">
+            Nenhuma dica encontrada.
+        </p>
+
+    </main>
+
+
+    <script src="../js/dicas.js"></script>
+
+</body>
+
+</html>

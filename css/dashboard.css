@@ -1,0 +1,793 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background: #f5f7fb;
+
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    height: 68px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    padding: 0 65px;
+
+    background: white;
+
+    border-bottom: 1px solid #e7eaf0;
+}
+
+
+.logo {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+}
+
+
+.logo .aviao {
+    color: #2563eb;
+
+    font-size: 17px;
+}
+
+
+.logo h1 {
+    color: #2563eb;
+
+    font-size: 19px;
+}
+
+
+nav {
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-left: auto;
+
+    margin-right: 35px;
+}
+
+
+nav a {
+    text-decoration: none;
+
+    color: #555;
+
+    font-size: 12px;
+
+    transition: 0.2s;
+}
+
+
+nav a:hover,
+nav a.ativo {
+    color: #2563eb;
+}
+
+
+.perfil-header {
+    width: 38px;
+
+    height: 38px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: #eaf1ff;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+    cursor: pointer;
+
+    overflow: hidden;
+
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+}
+
+
+.perfil-header img {
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: none;
+}
+
+
+/* CONTEÚDO */
+
+main {
+    width: 100%;
+
+    max-width: 1120px;
+
+    margin: 0 auto;
+
+    padding: 45px 25px 70px;
+}
+
+
+/* BOAS-VINDAS */
+
+.boas-vindas {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+}
+
+
+.boas-texto {
+    max-width: 720px;
+}
+
+
+.tag {
+    display: inline-block;
+
+    color: #2563eb;
+
+    font-size: 9px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+    margin-bottom: 8px;
+}
+
+
+.boas-vindas h2 {
+    font-size: 30px;
+
+    line-height: 1.2;
+
+    margin-bottom: 10px;
+}
+
+
+.boas-vindas h2 span {
+    color: #2563eb;
+}
+
+
+.boas-vindas p {
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.5;
+}
+
+
+/* BOTÃO PRINCIPAL */
+
+.btn-principal {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 11px 18px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    white-space: nowrap;
+
+    transition: 0.2s;
+}
+
+
+.btn-principal:hover {
+    background: #1e4fd6;
+}
+
+
+/* INDICADORES */
+
+.indicadores {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 15px;
+
+    margin-bottom: 45px;
+}
+
+
+.indicador {
+    background: white;
+
+    border: 1px solid #e6e9ef;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 14px;
+}
+
+
+.indicador-icone {
+    width: 42px;
+
+    height: 42px;
+
+    min-width: 42px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 8px;
+
+    background: #eaf1ff;
+
+    color: #2563eb;
+
+    font-size: 17px;
+
+    font-weight: bold;
+}
+
+
+.indicador span {
+    display: block;
+
+    color: #777;
+
+    font-size: 10px;
+
+    margin-bottom: 5px;
+}
+
+
+.indicador strong {
+    display: block;
+
+    font-size: 19px;
+
+    margin-bottom: 4px;
+}
+
+
+.indicador small {
+    display: block;
+
+    color: #9298a3;
+
+    font-size: 9px;
+}
+
+
+/* SEÇÕES */
+
+.secao {
+    margin-bottom: 45px;
+}
+
+
+.secao-cabecalho {
+    display: flex;
+
+    align-items: flex-end;
+
+    justify-content: space-between;
+
+    margin-bottom: 20px;
+}
+
+
+.secao-cabecalho h2 {
+    font-size: 20px;
+
+    margin-bottom: 5px;
+}
+
+
+.secao-cabecalho p {
+    color: #858b98;
+
+    font-size: 11px;
+}
+
+
+.secao-cabecalho > a {
+    color: #2563eb;
+
+    text-decoration: none;
+
+    font-size: 10px;
+
+    font-weight: bold;
+}
+
+
+.secao-cabecalho > a:hover {
+    text-decoration: underline;
+}
+
+
+/* ESTADO VAZIO */
+
+.estado-vazio {
+    background: white;
+
+    border: 1px dashed #d5dae3;
+
+    border-radius: 8px;
+
+    min-height: 250px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+
+.icone-vazio {
+    width: 55px;
+
+    height: 55px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #eaf1ff;
+
+    color: #2563eb;
+
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+
+.estado-vazio h3 {
+    font-size: 14px;
+
+    margin-bottom: 8px;
+}
+
+
+.estado-vazio p {
+    max-width: 400px;
+
+    color: #858b98;
+
+    font-size: 11px;
+
+    line-height: 1.5;
+
+    margin-bottom: 18px;
+}
+
+
+/* DESTINOS */
+
+.destinos-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.destino-card {
+    background: white;
+
+    border: 1px solid #e6e9ef;
+
+    border-radius: 8px;
+
+    overflow: hidden;
+
+    transition: 0.2s;
+}
+
+
+.destino-card:hover {
+    transform: translateY(-2px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.06);
+}
+
+
+/* IMAGENS */
+
+.destino-imagem {
+    height: 145px;
+
+    position: relative;
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.destino-imagem span {
+    position: absolute;
+
+    top: 12px;
+
+    right: 12px;
+
+    background: white;
+
+    color: #2563eb;
+
+    padding: 5px 9px;
+
+    border-radius: 4px;
+
+    font-size: 9px;
+
+    font-weight: bold;
+}
+
+
+/*
+    As imagens podem ser substituídas posteriormente
+    por imagens próprias ou de fontes autorizadas.
+*/
+
+.destino-gramado {
+    background:
+        linear-gradient(
+            rgba(30, 55, 90, 0.25),
+            rgba(30, 55, 90, 0.25)
+        ),
+        url("../assets/gramado.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.destino-porto {
+    background:
+        linear-gradient(
+            rgba(30, 55, 90, 0.2),
+            rgba(30, 55, 90, 0.2)
+        ),
+        url("../assets/porto-de-galinhas.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+.destino-salvador {
+    background:
+        linear-gradient(
+            rgba(30, 55, 90, 0.2),
+            rgba(30, 55, 90, 0.2)
+        ),
+        url("../assets/salvador.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+
+/* CONTEÚDO DOS CARDS */
+
+.destino-conteudo {
+    padding: 18px;
+}
+
+
+.destino-conteudo small {
+    color: #858b98;
+
+    font-size: 9px;
+}
+
+
+.destino-conteudo h3 {
+    font-size: 17px;
+
+    margin-top: 5px;
+
+    margin-bottom: 8px;
+}
+
+
+.destino-conteudo p {
+    color: #777;
+
+    font-size: 10px;
+
+    line-height: 1.5;
+
+    min-height: 31px;
+
+    margin-bottom: 18px;
+}
+
+
+.destino-conteudo button {
+    width: 100%;
+
+    padding: 9px;
+
+    background: white;
+
+    color: #2563eb;
+
+    border: 1px solid #2563eb;
+
+    border-radius: 5px;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+
+.destino-conteudo button:hover {
+    background: #2563eb;
+
+    color: white;
+}
+
+
+/* EXPERIÊNCIAS REAIS */
+
+.experiencias-banner {
+    background: white;
+
+    border: 1px solid #e6e9ef;
+
+    border-radius: 9px;
+
+    padding: 35px 40px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    gap: 30px;
+
+    overflow: hidden;
+
+    margin-bottom: 20px;
+}
+
+
+.experiencias-texto {
+    max-width: 650px;
+}
+
+
+.experiencias-texto h2 {
+    font-size: 22px;
+
+    margin-bottom: 9px;
+}
+
+
+.experiencias-texto p {
+    color: #777;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-bottom: 18px;
+}
+
+
+.experiencias-icone {
+    width: 115px;
+
+    height: 115px;
+
+    min-width: 115px;
+
+    border-radius: 50%;
+
+    background: #f5f7fb;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin-right: 35px;
+}
+
+
+.experiencias-icone span {
+    width: 65px;
+
+    height: 65px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #2563eb;
+
+    font-size: 28px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 900px) {
+
+    header {
+        padding: 0 25px;
+    }
+
+
+    main {
+        padding: 35px 20px 60px;
+    }
+
+
+    .indicadores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+
+    .destinos-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+
+@media (max-width: 650px) {
+
+    header {
+        height: 60px;
+    }
+
+
+    nav {
+        display: none;
+    }
+
+
+    .boas-vindas {
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .boas-vindas h2 {
+        font-size: 25px;
+    }
+
+
+    .indicadores {
+        grid-template-columns: 1fr;
+    }
+
+
+    .destinos-grid {
+        grid-template-columns: 1fr;
+    }
+
+
+    .secao-cabecalho {
+        align-items: flex-start;
+
+        gap: 15px;
+    }
+
+
+    .secao-cabecalho > a {
+        white-space: nowrap;
+    }
+
+
+    .experiencias-banner {
+        padding: 28px 25px;
+
+        flex-direction: column;
+
+        align-items: flex-start;
+    }
+
+
+    .experiencias-icone {
+        display: none;
+    }
+
+}

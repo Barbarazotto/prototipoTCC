@@ -1,0 +1,116 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Redefinir senha | TripInsight</title>
+
+    <link rel="stylesheet" href="../css/redefinir-senha.css">
+</head>
+
+<body>
+
+    <div class="login-container">
+
+        <div class="logo">
+            <span>✈</span>
+            <h1>TripInsight</h1>
+        </div>
+
+        <h2>Redefinir senha</h2>
+
+        <p class="subtitulo">
+            Crie uma nova senha para sua conta
+        </p>
+
+        <form id="redefinirForm">
+
+            <label for="novaSenha">
+                Nova senha
+            </label>
+
+            <div class="senha-container">
+
+                <input
+                    type="password"
+                    id="novaSenha"
+                    placeholder="Digite sua nova senha"
+                    minlength="8"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="olho"
+                    id="mostrarNovaSenha"
+                    aria-label="Mostrar nova senha">
+
+                <img
+                    src="https://img.icons8.com/?size=100&id=987&format=png&color=000000"
+                    alt="Senha oculta"
+                >
+
+                </button>
+
+            </div>
+
+            <label for="confirmarSenha">
+                Confirmar nova senha
+            </label>
+
+            <div class="senha-container">
+
+                <input
+                    type="password"
+                    id="confirmarSenha"
+                    placeholder="Digite novamente sua senha"
+                    minlength="8"
+                    required
+                >
+
+                <button
+                    type="button"
+                    class="olho"
+                    id="mostrarConfirmarSenha"
+                    aria-label="Mostrar confirmação da senha">
+
+                    <img
+                        src="https://img.icons8.com/?size=100&id=986&format=png&color=000000"
+                        alt="Mostrar senha"
+                    >
+
+                </button>
+
+            </div>
+
+            <button
+                type="submit"
+                class="botao-login"
+                id="botaoRedefinir">
+
+                Salvar nova senha
+
+            </button>
+
+        </form>
+
+        <p id="mensagem"></p>
+
+        <p class="cadastro-texto">
+            Lembrou sua senha?
+
+            <a href="login.html">
+                Voltar ao login
+            </a>
+        </p>
+
+    </div>
+
+    <script src="../js/redefinir-senha.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Meu perfil | TripInsight</title>
+
+    <link rel="stylesheet" href="../css/perfil.css">
+</head>
+
+<body>
+
+    <header>
+
+        <div class="logo">
+            <span class="aviao">✈</span>
+            <h1>TripInsight</h1>
+        </div>
+
+        <nav>
+            <a href="index.html">Início</a>
+            <a href="#">Destinos</a>
+            <a href="experiencias.html">Experiências</a>
+            <a href="dicas.html">Dicas</a>
+        </nav>
+
+        <div class="header-acoes">
+
+            <button
+                class="perfil-btn"
+                onclick="window.location.href='perfil.html'">
+                Perfil
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <main>
+
+        <div class="pagina-topo">
+
+            <p class="caminho">
+                Início / Perfil
+            </p>
+
+            <h2>Meu perfil</h2>
+
+        </div>
+
+
+        <section class="perfil-layout">
+
+
+            <!-- MENU LATERAL -->
+
+            <aside class="menu-perfil">
+
+                <a href="perfil.html" class="ativo">
+                    <span>♙</span>
+                    Meu perfil
+                </a>
+
+                <a href="experiencias.html">
+                    <span>✈</span>
+                    Minhas experiências
+                </a>
+
+                <a href="#">
+                    <span>♡</span>
+                    Favoritos
+                </a>
+
+                <a href="#">
+                    <span>☆</span>
+                    Avaliações
+                </a>
+
+                <a href="#">
+                    <span>⚙</span>
+                    Configurações
+                </a>
+
+                <button id="sair">
+                    <span>↪</span>
+                    Sair
+                </button>
+
+            </aside>
+
+
+            <!-- CONTEÚDO -->
+
+            <div class="conteudo-perfil">
+
+
+                <!-- CARTÃO PRINCIPAL -->
+
+                <section class="perfil-principal">
+
+                    <div class="perfil-identificacao">
+
+                        <div class="avatar">
+                            <span id="inicialUsuario">U</span>
+                            <img id="fotoUsuario" src="" alt="Foto de perfil">
+                        </div>
+
+                        <div class="dados-principais">
+
+                            <h3 id="nomeUsuario">
+                                Usuário
+                            </h3>
+
+                            <p id="emailUsuario">
+                                email@email.com
+                            </p>
+
+                            <button class="editar-btn" id="abrirEdicao">
+                                Editar perfil
+                            </button>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="estatisticas">
+
+                        <div class="estatistica">
+                            <strong>0</strong>
+                            <span>Experiências</span>
+                        </div>
+
+                        <div class="estatistica">
+                            <strong>0</strong>
+                            <span>Favoritos</span>
+                        </div>
+
+                        <div class="estatistica">
+                            <strong>0</strong>
+                            <span>Avaliações</span>
+                        </div>
+
+                        <div class="estatistica">
+                            <strong>0</strong>
+                            <span>Viagens</span>
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- INFORMAÇÕES DA CONTA -->
+
+                <section class="informacoes-conta">
+
+                    <div class="secao-titulo">
+
+                        <div>
+
+                            <h3>
+                                Informações da conta
+                            </h3>
+
+                            <p>
+                                Seus dados cadastrados no TripInsight
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div class="informacoes-grid">
+
+                        <div class="informacao">
+
+                            <span>
+                                Nome completo
+                            </span>
+
+                            <strong id="nomePerfil">
+                                Usuário
+                            </strong>
+
+                        </div>
+
+
+                        <div class="informacao">
+
+                            <span>
+                                E-mail
+                            </span>
+
+                            <strong id="emailPerfil">
+                                email@email.com
+                            </strong>
+
+                        </div>
+
+                    </div>
+
+                </section>
+
+
+                <!-- EXPERIÊNCIAS -->
+
+                <section class="minhas-experiencias">
+
+                    <div class="secao-titulo">
+
+                        <div>
+
+                            <h3>
+                                Minhas experiências
+                            </h3>
+
+                            <p>
+                                Viagens que você compartilhou
+                            </p>
+
+                        </div>
+
+                        <a href="experiencias.html">
+                            Ver todas
+                        </a>
+
+                    </div>
+
+
+                    <div class="experiencia-vazia">
+
+                        <div class="icone-vazio">
+                            ✈
+                        </div>
+
+                        <h4>
+                            Você ainda não compartilhou nenhuma experiência
+                        </h4>
+
+                        <p>
+                            Compartilhe sua viagem e ajude outros
+                            viajantes a planejarem melhor.
+                        </p>
+
+                        <button
+                            onclick="window.location.href='experiencias.html'">
+                            Compartilhar experiência
+                        </button>
+
+                    </div>
+
+                </section>
+
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- MODAL DE EDIÇÃO -->
+
+    <div id="modalEdicao" class="modal">
+
+        <div class="modal-conteudo">
+
+            <div class="modal-cabecalho">
+
+                <div>
+                    <h3>Editar perfil</h3>
+
+                    <p>
+                        Atualize suas informações do TripInsight.
+                    </p>
+                </div>
+
+                <button
+                    id="fecharEdicao"
+                    class="fechar-modal">
+                    ×
+                </button>
+
+            </div>
+
+
+            <!-- FOTO -->
+
+            <div class="foto-edicao">
+
+                <div class="avatar-edicao">
+
+                    <span id="inicialEdicao">
+                        U
+                    </span>
+
+                    <img
+                        id="previewFoto"
+                        src=""
+                        alt="Foto de perfil">
+
+                </div>
+
+
+                <div class="foto-acoes">
+
+                    <label
+                        for="fotoPerfil"
+                        class="foto-btn">
+                        Alterar foto
+                    </label>
+
+                    <input
+                        type="file"
+                        id="fotoPerfil"
+                        accept="image/png, image/jpeg, image/webp">
+
+                    <button
+                        id="removerFoto"
+                        class="remover-foto">
+                        Remover foto
+                    </button>
+
+                    <p>
+                        JPG, PNG ou WEBP
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- NOME -->
+
+            <div class="campo-edicao">
+
+                <label for="nomeEdicao">
+                    Nome completo
+                </label>
+
+                <input
+                    type="text"
+                    id="nomeEdicao"
+                    placeholder="Seu nome">
+
+            </div>
+
+
+            <!-- E-MAIL -->
+
+            <div class="campo-edicao">
+
+                <label for="emailEdicao">
+                    E-mail
+                </label>
+
+                <input
+                    type="email"
+                    id="emailEdicao"
+                    placeholder="seu@email.com">
+
+            </div>
+
+
+            <div
+                id="mensagemEdicao"
+                class="mensagem-edicao">
+            </div>
+
+
+            <!-- BOTÕES -->
+
+            <div class="acoes-edicao">
+
+                <button
+                    id="cancelarEdicao"
+                    class="cancelar-btn">
+                    Cancelar
+                </button>
+
+                <button
+                    id="salvarEdicao"
+                    class="salvar-btn">
+                    Salvar alterações
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="../js/perfil.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,407 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+body {
+    background: #f5f7fb;
+    color: #222;
+
+    min-height: 100vh;
+}
+
+
+/* HEADER */
+
+header {
+    height: 62px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 55px;
+
+    background: white;
+
+    border-bottom: 1px solid #e8ebf0;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+
+.logo .aviao {
+    color: #2563eb;
+    font-size: 15px;
+}
+
+
+.logo h1 {
+    color: #2563eb;
+    font-size: 17px;
+}
+
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+
+nav a {
+    color: #444;
+
+    text-decoration: none;
+
+    font-size: 12px;
+}
+
+
+nav a:hover {
+    color: #2563eb;
+}
+
+
+nav a.ativo {
+    color: #2563eb;
+    font-weight: bold;
+}
+
+
+.perfil-btn {
+    border: 1px solid #2563eb;
+
+    background: white;
+
+    color: #2563eb;
+
+    padding: 7px 16px;
+
+    border-radius: 5px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.perfil-btn:hover {
+    background: #2563eb;
+    color: white;
+}
+
+
+/* CONTEÚDO */
+
+main {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 35px 25px 60px;
+}
+
+
+/* TOPO */
+
+.topo {
+    margin-bottom: 25px;
+}
+
+
+.caminho {
+    color: #7a8190;
+
+    font-size: 11px;
+
+    margin-bottom: 8px;
+}
+
+
+.topo h2 {
+    font-size: 26px;
+
+    margin-bottom: 8px;
+}
+
+
+.descricao {
+    color: #737b89;
+
+    font-size: 13px;
+
+    max-width: 650px;
+
+    line-height: 1.5;
+}
+
+
+/* PESQUISA */
+
+.pesquisa {
+    display: flex;
+
+    gap: 8px;
+
+    margin-bottom: 20px;
+}
+
+
+.pesquisa input {
+    width: 100%;
+
+    max-width: 500px;
+
+    padding: 11px 14px;
+
+    border: 1px solid #d9dee7;
+
+    border-radius: 6px;
+
+    background: white;
+
+    outline: none;
+
+    font-size: 12px;
+}
+
+
+.pesquisa input:focus {
+    border-color: #2563eb;
+}
+
+
+.pesquisa button {
+    border: none;
+
+    background: #2563eb;
+
+    color: white;
+
+    padding: 0 22px;
+
+    border-radius: 6px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.pesquisa button:hover {
+    background: #1e4fd6;
+}
+
+
+/* CATEGORIAS */
+
+.categorias {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 25px;
+}
+
+
+.categoria {
+    border: 1px solid #dce1e9;
+
+    background: white;
+
+    color: #555;
+
+    padding: 8px 15px;
+
+    border-radius: 20px;
+
+    font-size: 11px;
+
+    cursor: pointer;
+}
+
+
+.categoria:hover {
+    border-color: #2563eb;
+
+    color: #2563eb;
+}
+
+
+.categoria.ativo {
+    background: #2563eb;
+
+    border-color: #2563eb;
+
+    color: white;
+}
+
+
+/* CARDS */
+
+.lista-dicas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 18px;
+}
+
+
+.card-dica {
+    background: white;
+
+    border: 1px solid #e5e8ee;
+
+    border-radius: 8px;
+
+    padding: 20px;
+
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+
+.card-dica:hover {
+    transform: translateY(-3px);
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.08);
+}
+
+
+.icone {
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    margin-bottom: 15px;
+
+    border-radius: 8px;
+
+    background: #eaf1ff;
+
+    color: #2563eb;
+
+    font-weight: bold;
+
+    font-size: 14px;
+}
+
+
+.categoria-card {
+    display: inline-block;
+
+    color: #2563eb;
+
+    font-size: 10px;
+
+    font-weight: bold;
+
+    margin-bottom: 8px;
+}
+
+
+.card-dica h3 {
+    font-size: 15px;
+
+    margin-bottom: 9px;
+
+    line-height: 1.3;
+}
+
+
+.card-dica p {
+    color: #737b89;
+
+    font-size: 11px;
+
+    line-height: 1.6;
+
+    margin-bottom: 15px;
+}
+
+
+.card-dica a {
+    color: #2563eb;
+
+    font-size: 11px;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+
+.card-dica a:hover {
+    text-decoration: underline;
+}
+
+
+/* NENHUMA DICA */
+
+#nenhumaDica {
+    display: none;
+
+    text-align: center;
+
+    color: #777;
+
+    font-size: 13px;
+
+    padding: 40px;
+}
+
+
+/* RESPONSIVIDADE */
+
+@media (max-width: 800px) {
+
+    header {
+        padding: 0 20px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    main {
+        padding: 25px 15px;
+    }
+
+    .lista-dicas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+@media (max-width: 550px) {
+
+    .lista-dicas {
+        grid-template-columns: 1fr;
+    }
+
+    .pesquisa {
+        flex-direction: column;
+    }
+
+    .pesquisa button {
+        padding: 11px;
+    }
+
+}

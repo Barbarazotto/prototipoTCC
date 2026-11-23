@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | TripInsight</title>
+
+    <link rel="stylesheet" href="../css/dashboard.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+
+    <header>
+
+        <div class="logo">
+
+            <span class="aviao">✈</span>
+
+            <h1>TripInsight</h1>
+
+        </div>
+
+
+        <nav>
+
+            <a href="index.html" class="ativo">
+                Início
+            </a>
+
+            <a href="#">
+                Destinos
+            </a>
+
+            <a href="experiencias.html">
+                Experiências
+            </a>
+
+            <a href="dicas.html">
+                Dicas
+            </a>
+
+        </nav>
+
+
+        <button
+            class="perfil-header"
+            onclick="window.location.href='perfil.html'">
+
+            <span id="inicialUsuario">
+                B
+            </span>
+
+            <img
+                id="fotoUsuario"
+                src=""
+                alt="Foto de perfil">
+
+        </button>
+
+    </header>
+
+
+
+    <!-- CONTEÚDO PRINCIPAL -->
+
+    <main>
+
+
+        <!-- BOAS-VINDAS -->
+
+        <section class="boas-vindas">
+
+            <div class="boas-texto">
+
+                <span class="tag">
+                    SEU PAINEL DE VIAGENS
+                </span>
+
+                <h2>
+                    Olá,
+                    <span id="nomeUsuario">
+                        Viajante
+                    </span>!
+                </h2>
+
+                <p>
+                    Planeje sua próxima viagem, organize seus gastos
+                    e descubra experiências de outros viajantes.
+                </p>
+
+            </div>
+
+
+            <button
+                class="btn-principal"
+                id="planejarViagem">
+
+                + Planejar uma viagem
+
+            </button>
+
+        </section>
+
+
+
+        <!-- INDICADORES -->
+
+        
+<!-- INDICADORES -->
+
+<section class="indicadores">
+
+    <div class="indicador">
+        <div class="indicador-icone">✈</div>
+        <div>
+            <span>Minhas viagens</span>
+            <strong id="totalViagens">0</strong>
+            <small>viagens planejadas</small>
+        </div>
+    </div>
+
+    <div class="indicador">
+        <div class="indicador-icone">R$</div>
+        <div>
+            <span>Meu orçamento</span>
+            <strong id="orcamentoTotal">R$ 0,00</strong>
+            <small>orçamento planejado</small>
+        </div>
+    </div>
+
+    <div class="indicador">
+        <div class="indicador-icone">♡</div>
+        <div>
+            <span>Favoritos</span>
+            <strong id="totalFavoritos">0</strong>
+            <small>experiências salvas</small>
+        </div>
+    </div>
+
+    <div class="indicador">
+        <div class="indicador-icone">☆</div>
+        <div>
+            <span>Experiências</span>
+            <strong id="totalExperiencias">0</strong>
+            <small>experiências compartilhadas</small>
+        </div>
+    </div>
+
+</section>
+
+
+
+        <!-- MINHAS VIAGENS -->
+
+        <section class="secao">
+
+
+            <div class="secao-cabecalho">
+
+                <div>
+
+                    <span class="tag">
+                        PLANEJAMENTO
+                    </span>
+
+                    <h2>
+                        Minhas viagens
+                    </h2>
+
+                    <p>
+                        Organize suas viagens e acompanhe seus planejamentos.
+                    </p>
+
+                </div>
+
+
+                <a href="#">
+                    Ver todas →
+                </a>
+
+            </div>
+
+
+
+            <div class="estado-vazio">
+
+                <div class="icone-vazio">
+                    ✈
+                </div>
+
+                <h3>
+                    Você ainda não possui viagens planejadas
+                </h3>
+
+                <p>
+                    Comece a planejar sua próxima viagem e organize
+                    tudo em um só lugar.
+                </p>
+
+                <button
+                    class="btn-principal"
+                    id="planejarViagemVazio">
+
+                    + Planejar uma viagem
+
+                </button>
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- DESTINOS EM DESTAQUE -->
+
+        <section class="secao">
+
+
+            <div class="secao-cabecalho">
+
+                <div>
+
+                    <span class="tag">
+                        INSPIRAÇÃO
+                    </span>
+
+                    <h2>
+                        Destinos em destaque
+                    </h2>
+
+                    <p>
+                        Descubra destinos e compare informações de viagem.
+                    </p>
+
+                </div>
+
+
+                <a href="#">
+                    Ver destinos →
+                </a>
+
+            </div>
+
+
+
+            <div class="destinos-grid">
+
+
+                <!-- GRAMADO -->
+
+                <article class="destino-card">
+
+                    <div class="destino-imagem destino-gramado">
+
+                        <span>
+                            Serra
+                        </span>
+
+                    </div>
+
+
+                    <div class="destino-conteudo">
+
+                        <small>
+                            Rio Grande do Sul
+                        </small>
+
+                        <h3>
+                            Gramado
+                        </h3>
+
+                        <p>
+                            Descubra experiências e informações para
+                            planejar sua viagem.
+                        </p>
+
+                        <button>
+                            Ver destino
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- PORTO DE GALINHAS -->
+
+                <article class="destino-card">
+
+                    <div class="destino-imagem destino-porto">
+
+                        <span>
+                            Praia
+                        </span>
+
+                    </div>
+
+
+                    <div class="destino-conteudo">
+
+                        <small>
+                            Pernambuco
+                        </small>
+
+                        <h3>
+                            Porto de Galinhas
+                        </h3>
+
+                        <p>
+                            Explore experiências de outros viajantes
+                            antes de planejar sua viagem.
+                        </p>
+
+                        <button>
+                            Ver destino
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+
+                <!-- SALVADOR -->
+
+                <article class="destino-card">
+
+                    <div class="destino-imagem destino-salvador">
+
+                        <span>
+                            Cultural
+                        </span>
+
+                    </div>
+
+
+                    <div class="destino-conteudo">
+
+                        <small>
+                            Bahia
+                        </small>
+
+                        <h3>
+                            Salvador
+                        </h3>
+
+                        <p>
+                            Conheça experiências compartilhadas por
+                            outros viajantes.
+                        </p>
+
+                        <button>
+                            Ver destino
+                        </button>
+
+                    </div>
+
+                </article>
+
+
+            </div>
+
+
+        </section>
+
+
+
+        <!-- EXPERIÊNCIAS REAIS -->
+
+        <section class="experiencias-banner">
+
+            <div class="experiencias-texto">
+
+                <span class="tag">
+                    EXPERIÊNCIAS REAIS
+                </span>
+
+                <h2>
+                    Veja o que outros viajantes compartilharam
+                </h2>
+
+                <p>
+                    Descubra experiências, gastos e dicas de pessoas
+                    que já conheceram diferentes destinos.
+                </p>
+
+                <button
+                    class="btn-principal"
+                    onclick="window.location.href='experiencias.html'">
+
+                    Explorar experiências
+
+                </button>
+
+            </div>
+
+
+            <div class="experiencias-icone">
+
+                <span>
+                    ☆
+                </span>
+
+            </div>
+
+        </section>
+
+
+    </main>
+
+
+    <script src="../js/dashboard.js"></script>
+
+</body>
+
+</html>
