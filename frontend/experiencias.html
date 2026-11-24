@@ -1,0 +1,228 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Experiências | TripInsight</title>
+
+    <link rel="stylesheet" href="../css/experiencia.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+
+<body>
+
+    <header class="cabecalho">
+
+        <a href="index.html" class="logo">
+            Trip<span>Insight</span>
+        </a>
+
+        <nav class="menu">
+            <a href="index.html">Início</a>
+            <a href="dashboard.html">Dashboard</a>
+            <a href="#">Destinos</a>
+            <a href="experiencia.html" class="ativo">Experiências</a>
+            <a href="dicas.html">Dicas</a>
+        </nav>
+
+        <a href="perfil.html" class="perfil-link">
+            <i class="fa-solid fa-user"></i>
+            Meu perfil
+        </a>
+
+    </header>
+
+
+    <main class="container">
+
+        <section class="introducao">
+
+            <div>
+                <span class="subtitulo">COMUNIDADE TRIPINSIGHT</span>
+
+                <h1>Experiências de viagem</h1>
+
+                <p>
+                    Descubra histórias, conheça destinos e compartilhe
+                    suas experiências com outros viajantes.
+                </p>
+            </div>
+
+            <button class="botao-publicar" id="abrirFormulario">
+                <i class="fa-solid fa-plus"></i>
+                Compartilhar experiência
+            </button>
+
+        </section>
+
+
+        <!-- FORMULÁRIO DE PUBLICAÇÃO -->
+
+        <section class="area-formulario" id="areaFormulario">
+
+            <div class="formulario-card">
+
+                <div class="formulario-topo">
+
+                    <div>
+                        <span class="subtitulo">SUA HISTÓRIA</span>
+                        <h2>Compartilhe sua viagem</h2>
+                        <p>Conte como foi sua experiência e ajude outros viajantes.</p>
+                    </div>
+
+                    <button
+                        type="button"
+                        class="fechar-formulario"
+                        id="fecharFormulario"
+                        aria-label="Fechar formulário"
+                    >
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+
+                </div>
+
+
+                <form id="formExperiencia">
+
+                    <div class="campo">
+                        <label for="destino">Destino visitado</label>
+
+                        <input
+                            type="text"
+                            id="destino"
+                            placeholder="Ex.: Rio de Janeiro, Brasil"
+                            maxlength="100"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="titulo">Título da experiência</label>
+
+                        <input
+                            type="text"
+                            id="titulo"
+                            placeholder="Ex.: Minha viagem inesquecível"
+                            maxlength="150"
+                            required
+                        >
+                    </div>
+
+
+                    <div class="campo">
+                        <label for="relato">Conte como foi sua viagem</label>
+
+                        <textarea
+                            id="relato"
+                            placeholder="Compartilhe os lugares que visitou, o que mais gostou e suas dicas..."
+                            rows="6"
+                            required
+                        ></textarea>
+                    </div>
+
+
+                    <div class="campos-duplos">
+
+                        <div class="campo">
+                            <label for="gastoTotal">Gasto total (R$)</label>
+
+                            <input
+                                type="number"
+                                id="gastoTotal"
+                                placeholder="Ex.: 1500,00"
+                                min="0"
+                                step="0.01"
+                            >
+                        </div>
+
+
+                        <div class="campo">
+                            <label for="avaliacao">Avaliação do destino</label>
+
+                            <select id="avaliacao">
+                                <option value="">Sem avaliação</option>
+                                <option value="1">1 estrela</option>
+                                <option value="2">2 estrelas</option>
+                                <option value="3">3 estrelas</option>
+                                <option value="4">4 estrelas</option>
+                                <option value="5">5 estrelas</option>
+                            </select>
+                        </div>
+
+                    </div>
+
+
+                    <p id="mensagemFormulario" class="mensagem"></p>
+
+
+                    <div class="botoes-formulario">
+
+                        <button
+                            type="button"
+                            class="botao-cancelar"
+                            id="cancelarFormulario"
+                        >
+                            Cancelar
+                        </button>
+
+                        <button
+                            type="submit"
+                            class="botao-enviar"
+                            id="botaoEnviar"
+                        >
+                            Publicar experiência
+                        </button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </section>
+
+
+        <!-- LISTAGEM DE EXPERIÊNCIAS -->
+
+        <section class="secao-experiencias">
+
+            <div class="titulo-secao">
+                <div>
+                    <span class="subtitulo">INSPIRAÇÃO PARA VIAJAR</span>
+                    <h2>Histórias da comunidade</h2>
+                </div>
+
+                <span id="contadorExperiencias" class="contador">
+                    0 experiências
+                </span>
+            </div>
+
+
+            <div id="listaExperiencias" class="lista-experiencias">
+
+                <div class="carregando">
+                    <i class="fa-solid fa-spinner fa-spin"></i>
+                    Carregando experiências...
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <footer class="rodape">
+        <p>© 2026 TripInsight. Compartilhando experiências pelo mundo.</p>
+    </footer>
+
+
+    <script src="../js/experiencia.js"></script>
+
+</body>
+</html>
+

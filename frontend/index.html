@@ -1,90 +1,408 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TripInsight</title>
+    <meta name="description" content="Descubra destinos, compare experiências reais e planeje sua próxima viagem com o TripInsight.">
+
+    <title>TripInsight | Planeje sua próxima viagem</title>
+
     <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
 
-    <header>
-        <div class="logo">
-            <h1>TripInsight</h1>
-        </div>
+    <!-- CABEÇALHO -->
+    <header class="header">
 
-        <nav>
-            <a href="#">Início</a>
-            <a href="#">Experiências</a>
-            <a href="#">Dicas</a>
-            <a href="#">Entrar</a>
+        <a href="index.html" class="logo">
+            <span class="logo-icon">✈</span>
+            <h1>TripInsight</h1>
+        </a>
+
+        <nav class="nav">
+            <a href="index.html" class="ativo">Início</a>
+            <a href="experiencia.html">Experiências</a>
+            <a href="dicas.html">Dicas</a>
         </nav>
+
+        <a href="login.html" class="botao-entrar">Entrar</a>
+
     </header>
 
-    <section class="hero">
-        <h2>Planeje viagens com informações reais</h2>
 
-        <p>
-            Descubra quanto outros viajantes realmente gastaram,
-            organize seu orçamento e viaje com mais segurança.
-        </p>
+    <main>
 
-        <button>Explorar Destinos</button>
-    </section>
+        <!-- BANNER PRINCIPAL -->
+        <section class="hero">
 
-    <section class="pesquisa">
-        <h2>Pesquisar Destino</h2>
+            <div class="hero-conteudo">
 
-        <input type="text" placeholder="Ex: Gramado">
-        <button>Pesquisar</button>
-    </section>
+                <span class="hero-etiqueta">SUA PRÓXIMA VIAGEM COMEÇA AQUI</span>
 
-    <section class="experiencias">
+                <h2>
+                    Viaje mais.
+                    <span>Planeje melhor.</span>
+                </h2>
 
-        <h2>Experiências em Destaque</h2>
+                <p>
+                    Descubra experiências reais de outros viajantes,
+                    conheça novos destinos e organize seus gastos
+                    antes de fazer as malas.
+                </p>
 
-        <div class="cards">
+                <a href="experiencia.html" class="botao-principal">
+                    Explorar experiências
+                    <span>→</span>
+                </a>
 
-            <div class="card">
-                <h3>Gramado - RS</h3>
-                <p>Gasto médio: R$ 2.800</p>
             </div>
 
-            <div class="card">
-                <h3>Porto de Galinhas - PE</h3>
-                <p>Gasto médio: R$ 3.200</p>
+        </section>
+
+
+        <!-- PESQUISA -->
+        <section class="pesquisa">
+
+            <div class="pesquisa-conteudo">
+
+                <div class="pesquisa-texto">
+                    <span class="subtitulo">ENCONTRE SEU PRÓXIMO DESTINO</span>
+                    <h2>Para onde você quer viajar?</h2>
+                    <p>Pesquise um destino e descubra experiências compartilhadas por outros viajantes.</p>
+                </div>
+
+                <form class="pesquisa-form" id="pesquisaForm">
+
+                    <span class="icone-pesquisa">⌕</span>
+
+                    <input
+                        type="search"
+                        id="campoPesquisa"
+                        placeholder="Digite um destino..."
+                        aria-label="Pesquisar destino"
+                    >
+
+                    <button type="submit">Pesquisar</button>
+
+                </form>
+
+                <p id="mensagemPesquisa" class="mensagem-pesquisa"></p>
+
             </div>
 
-            <div class="card">
-                <h3>Salvador - BA</h3>
-                <p>Gasto médio: R$ 2.500</p>
+        </section>
+
+
+        <!-- EXPERIÊNCIAS EM DESTAQUE -->
+        <section class="experiencias" id="experiencias">
+
+            <div class="secao-cabecalho">
+
+                <div>
+                    <span class="subtitulo">INSPIRE-SE PARA VIAJAR</span>
+                    <h2>Destinos em destaque</h2>
+                    <p>Conheça alguns lugares que podem fazer parte da sua próxima viagem.</p>
+                </div>
+
+                <a href="experiencia.html" class="link-ver-mais">
+                    Ver experiências
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="cards">
+
+                <article class="card" data-destino="gramado rio grande do sul">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=800&q=85"
+                        alt="Paisagem de montanhas e casas em uma região turística"
+                        class="card-imagem"
+                    >
+
+                    <div class="card-conteudo">
+
+                        <span class="card-local">RIO GRANDE DO SUL</span>
+
+                        <h3>Gramado</h3>
+
+                        <p>
+                            Conheça o charme da Serra Gaúcha e suas
+                            experiências de viagem.
+                        </p>
+
+                        <a href="experiencia.html" class="card-link">
+                            Explorar destino →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card" data-destino="porto de galinhas pernambuco">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=85"
+                        alt="Praia de águas claras e areia branca"
+                        class="card-imagem"
+                    >
+
+                    <div class="card-conteudo">
+
+                        <span class="card-local">PERNAMBUCO</span>
+
+                        <h3>Porto de Galinhas</h3>
+
+                        <p>
+                            Descubra praias paradisíacas e paisagens
+                            incríveis no litoral pernambucano.
+                        </p>
+
+                        <a href="experiencia.html" class="card-link">
+                            Explorar destino →
+                        </a>
+
+                    </div>
+
+                </article>
+
+
+                <article class="card" data-destino="salvador bahia">
+
+                    <img
+                        src="https://images.unsplash.com/photo-1518509562904-e7ef99cdcc86?auto=format&fit=crop&w=800&q=85"
+                        alt="Vista de uma cidade brasileira próxima ao mar"
+                        class="card-imagem"
+                    >
+
+                    <div class="card-conteudo">
+
+                        <span class="card-local">BAHIA</span>
+
+                        <h3>Salvador</h3>
+
+                        <p>
+                            Explore a cultura, a história e as paisagens
+                            de uma das cidades mais conhecidas do Brasil.
+                        </p>
+
+                        <a href="experiencia.html" class="card-link">
+                            Explorar destino →
+                        </a>
+
+                    </div>
+
+                </article>
+
+            </div>
+
+            <p id="semResultados" class="sem-resultados">
+                Nenhum destino encontrado.
+            </p>
+
+        </section>
+
+
+        <!-- SOBRE O TRIPINSIGHT -->
+        <section class="sobre">
+
+            <div class="sobre-imagem">
+                <img
+                    src="https://images.unsplash.com/photo-1488646953014-85cb44e25828?auto=format&fit=crop&w=1000&q=85"
+                    alt="Viajante observando uma paisagem durante uma viagem"
+                >
+            </div>
+
+            <div class="sobre-conteudo">
+
+                <span class="subtitulo">MAIS INFORMAÇÃO, MELHORES ESCOLHAS</span>
+
+                <h2>Planejar uma viagem pode ser mais simples.</h2>
+
+                <p>
+                    No TripInsight, você encontra relatos e informações
+                    compartilhadas por outros viajantes para ter uma
+                    visão mais clara sobre destinos, experiências e gastos.
+                </p>
+
+                <p>
+                    Nosso objetivo é ajudar você a planejar sua viagem
+                    com mais informação e confiança.
+                </p>
+
+                <a href="cadastro.html" class="botao-principal">
+                    Faça parte do TripInsight
+                    <span>→</span>
+                </a>
+
+            </div>
+
+        </section>
+
+
+        <!-- DICAS -->
+        <section class="dicas" id="dicas">
+
+            <div class="secao-cabecalho">
+
+                <div>
+                    <span class="subtitulo">VIAJE COM PLANEJAMENTO</span>
+                    <h2>Dicas para sua viagem</h2>
+                    <p>Pequenos cuidados podem ajudar na organização da sua próxima aventura.</p>
+                </div>
+
+                <a href="dicas.html" class="link-ver-mais">
+                    Ver todas as dicas
+                    <span>→</span>
+                </a>
+
+            </div>
+
+
+            <div class="dicas-cards">
+
+                <article class="dica-card">
+                    <div class="dica-numero">01</div>
+                    <h3>Organize seu orçamento</h3>
+                    <p>
+                        Defina quanto pretende gastar e acompanhe
+                        seus gastos durante o planejamento.
+                    </p>
+                </article>
+
+                <article class="dica-card">
+                    <div class="dica-numero">02</div>
+                    <h3>Pesquise antes de reservar</h3>
+                    <p>
+                        Compare opções de transporte e hospedagem
+                        antes de tomar uma decisão.
+                    </p>
+                </article>
+
+                <article class="dica-card">
+                    <div class="dica-numero">03</div>
+                    <h3>Consulte experiências reais</h3>
+                    <p>
+                        Conheça relatos de outros viajantes e
+                        considere diferentes perspectivas.
+                    </p>
+                </article>
+
+            </div>
+
+        </section>
+
+
+        <!-- CHAMADA FINAL -->
+        <section class="chamada-final">
+
+            <h2>Sua próxima história começa com um planejamento.</h2>
+
+            <p>
+                Descubra novos destinos e compartilhe suas experiências
+                com a comunidade TripInsight.
+            </p>
+
+            <a href="cadastro.html" class="botao-chamada">
+                Criar minha conta
+            </a>
+
+        </section>
+
+    </main>
+
+
+    <!-- RODAPÉ -->
+    <footer class="footer">
+
+        <div class="footer-conteudo">
+
+            <div class="footer-logo">
+                <h2>TripInsight</h2>
+                <p>Mais informação para viagens melhores.</p>
+            </div>
+
+            <div class="footer-links">
+                <a href="index.html">Início</a>
+                <a href="experiencia.html">Experiências</a>
+                <a href="dicas.html">Dicas</a>
+                <a href="login.html">Entrar</a>
             </div>
 
         </div>
 
-    </section>
-
-    <section class="dicas">
-
-        <h2>Dicas de Economia</h2>
-
-        <div class="cards">
-
-            <div class="card">
-                Reserve passagens com antecedência.
-            </div>
-
-            <div class="card">
-                Compare preços de hospedagem.
-            </div>
-
-            <div class="card">
-                Planeje seus gastos antes da viagem.
-            </div>
-
+        <div class="footer-final">
+            <p>© 2026 TripInsight. Todos os direitos reservados.</p>
         </div>
 
-    </section>
+    </footer>
+
+
+    <!-- PESQUISA DOS DESTINOS EM DESTAQUE -->
+    <script>
+        const formularioPesquisa = document.getElementById("pesquisaForm");
+        const campoPesquisa = document.getElementById("campoPesquisa");
+        const mensagemPesquisa = document.getElementById("mensagemPesquisa");
+        const cards = document.querySelectorAll(".card[data-destino]");
+        const semResultados = document.getElementById("semResultados");
+
+        formularioPesquisa.addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            const pesquisa = campoPesquisa.value
+                .trim()
+                .toLowerCase();
+
+            if (!pesquisa) {
+                mensagemPesquisa.textContent = "Digite o nome de um destino.";
+                return;
+            }
+
+            let encontrados = 0;
+
+            cards.forEach(function(card) {
+                const destino = card.dataset.destino.toLowerCase();
+
+                if (destino.includes(pesquisa)) {
+                    card.style.display = "block";
+                    encontrados++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            mensagemPesquisa.textContent = encontrados
+                ? encontrados + (encontrados === 1
+                    ? " destino encontrado."
+                    : " destinos encontrados.")
+                : "Não encontramos esse destino entre os destaques.";
+
+            semResultados.style.display = encontrados === 0
+                ? "block"
+                : "none";
+
+            document.getElementById("experiencias").scrollIntoView({
+                behavior: "smooth"
+            });
+        });
+
+        campoPesquisa.addEventListener("input", function() {
+            if (!campoPesquisa.value.trim()) {
+                cards.forEach(function(card) {
+                    card.style.display = "block";
+                });
+
+                mensagemPesquisa.textContent = "";
+                semResultados.style.display = "none";
+            }
+        });
+    </script>
 
 </body>
 </html>

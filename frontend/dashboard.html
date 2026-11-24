@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 
@@ -24,18 +25,21 @@
 
         </div>
 
-
         <nav>
 
-            <a href="index.html" class="ativo">
+            <a href="index.html">
                 Início
+            </a>
+
+            <a href="dashboard.html" class="ativo">
+                Dashboard
             </a>
 
             <a href="#">
                 Destinos
             </a>
 
-            <a href="experiencias.html">
+            <a href="experiencia.html">
                 Experiências
             </a>
 
@@ -44,7 +48,6 @@
             </a>
 
         </nav>
-
 
         <button
             class="perfil-header"
@@ -64,11 +67,9 @@
     </header>
 
 
-
     <!-- CONTEÚDO PRINCIPAL -->
 
     <main>
-
 
         <!-- BOAS-VINDAS -->
 
@@ -94,7 +95,6 @@
 
             </div>
 
-
             <button
                 class="btn-principal"
                 id="planejarViagem">
@@ -106,58 +106,64 @@
         </section>
 
 
-
         <!-- INDICADORES -->
 
-        
-<!-- INDICADORES -->
+        <section class="indicadores">
 
-<section class="indicadores">
+            <div class="indicador">
 
-    <div class="indicador">
-        <div class="indicador-icone">✈</div>
-        <div>
-            <span>Minhas viagens</span>
-            <strong id="totalViagens">0</strong>
-            <small>viagens planejadas</small>
-        </div>
-    </div>
+                <div class="indicador-icone">✈</div>
 
-    <div class="indicador">
-        <div class="indicador-icone">R$</div>
-        <div>
-            <span>Meu orçamento</span>
-            <strong id="orcamentoTotal">R$ 0,00</strong>
-            <small>orçamento planejado</small>
-        </div>
-    </div>
+                <div>
+                    <span>Minhas viagens</span>
+                    <strong id="totalViagens">0</strong>
+                    <small>viagens planejadas</small>
+                </div>
 
-    <div class="indicador">
-        <div class="indicador-icone">♡</div>
-        <div>
-            <span>Favoritos</span>
-            <strong id="totalFavoritos">0</strong>
-            <small>experiências salvas</small>
-        </div>
-    </div>
+            </div>
 
-    <div class="indicador">
-        <div class="indicador-icone">☆</div>
-        <div>
-            <span>Experiências</span>
-            <strong id="totalExperiencias">0</strong>
-            <small>experiências compartilhadas</small>
-        </div>
-    </div>
+            <div class="indicador">
 
-</section>
+                <div class="indicador-icone">R$</div>
 
+                <div>
+                    <span>Meu orçamento</span>
+                    <strong id="orcamentoTotal">R$ 0,00</strong>
+                    <small>orçamento planejado</small>
+                </div>
+
+            </div>
+
+            <div class="indicador">
+
+                <div class="indicador-icone">♡</div>
+
+                <div>
+                    <span>Favoritos</span>
+                    <strong id="totalFavoritos">0</strong>
+                    <small>experiências salvas</small>
+                </div>
+
+            </div>
+
+            <div class="indicador">
+
+                <div class="indicador-icone">☆</div>
+
+                <div>
+                    <span>Experiências</span>
+                    <strong id="totalExperiencias">0</strong>
+                    <small>experiências compartilhadas</small>
+                </div>
+
+            </div>
+
+        </section>
 
 
         <!-- MINHAS VIAGENS -->
 
         <section class="secao">
-
 
             <div class="secao-cabecalho">
 
@@ -177,14 +183,11 @@
 
                 </div>
 
-
                 <a href="#">
                     Ver todas →
                 </a>
 
             </div>
-
-
 
             <div class="estado-vazio">
 
@@ -211,15 +214,12 @@
 
             </div>
 
-
         </section>
-
 
 
         <!-- DESTINOS EM DESTAQUE -->
 
         <section class="secao">
-
 
             <div class="secao-cabecalho">
 
@@ -239,17 +239,13 @@
 
                 </div>
 
-
                 <a href="#">
                     Ver destinos →
                 </a>
 
             </div>
 
-
-
             <div class="destinos-grid">
-
 
                 <!-- GRAMADO -->
 
@@ -262,7 +258,6 @@
                         </span>
 
                     </div>
-
 
                     <div class="destino-conteudo">
 
@@ -288,7 +283,6 @@
                 </article>
 
 
-
                 <!-- PORTO DE GALINHAS -->
 
                 <article class="destino-card">
@@ -300,7 +294,6 @@
                         </span>
 
                     </div>
-
 
                     <div class="destino-conteudo">
 
@@ -326,7 +319,6 @@
                 </article>
 
 
-
                 <!-- SALVADOR -->
 
                 <article class="destino-card">
@@ -338,7 +330,6 @@
                         </span>
 
                     </div>
-
 
                     <div class="destino-conteudo">
 
@@ -363,12 +354,9 @@
 
                 </article>
 
-
             </div>
 
-
         </section>
-
 
 
         <!-- EXPERIÊNCIAS REAIS -->
@@ -392,14 +380,13 @@
 
                 <button
                     class="btn-principal"
-                    onclick="window.location.href='experiencias.html'">
+                    onclick="window.location.href='experiencia.html'">
 
                     Explorar experiências
 
                 </button>
 
             </div>
-
 
             <div class="experiencias-icone">
 
@@ -410,7 +397,6 @@
             </div>
 
         </section>
-
 
     </main>
 

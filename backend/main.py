@@ -135,6 +135,24 @@ def buscar_experiencia(experiencia_id, db):
     return experiencia
 
 
+# FORMATAÇÃO DAS EXPERIÊNCIAS
+
+def formatar_experiencia(experiencia):
+
+    return {
+        "id": experiencia.id,
+        "usuario_id": experiencia.usuario_id,
+        "nome_usuario": experiencia.usuario.nome,
+        "foto_perfil_usuario": experiencia.usuario.foto_perfil,
+        "destino": experiencia.destino,
+        "titulo": experiencia.titulo,
+        "relato": experiencia.relato,
+        "gasto_total": experiencia.gasto_total,
+        "avaliacao": experiencia.avaliacao,
+        "data_publicacao": experiencia.data_publicacao
+    }
+
+
 # GERENCIAMENTO DE SENHAS
 
 def gerar_hash_senha(senha):
@@ -746,7 +764,7 @@ def excluir_viagem(
 
 # EXPERIÊNCIAS
 
-# LISTAR EXPERIÊNCIAS
+# LISTAR TODAS AS EXPERIÊNCIAS
 
 @app.get("/experiencias")
 def listar_experiencias(
@@ -757,7 +775,32 @@ def listar_experiencias(
         Experiencia.id.desc()
     ).all()
 
-    return experiencias
+    return [
+        formatar_experiencia(experiencia)
+        for experiencia in experiencias
+    ]
+
+
+# LISTAR EXPERIÊNCIAS DE UM USUÁRIO
+
+@app.get("/usuarios/{usuario_id}/experiencias")
+def listar_experiencias_usuario(
+    usuario_id: int,
+    db: Session = Depends(get_db)
+):
+
+    buscar_usuario(usuario_id, db)
+
+    experiencias = db.query(Experiencia).filter(
+        Experiencia.usuario_id == usuario_id
+    ).order_by(
+        Experiencia.id.desc()
+    ).all()
+
+    return [
+        formatar_experiencia(experiencia)
+        for experiencia in experiencias
+    ]
 
 
 # CRIAR EXPERIÊNCIA
@@ -786,7 +829,7 @@ def criar_experiencia(
 
     return {
         "mensagem": "Experiência publicada com sucesso!",
-        "experiencia": nova_experiencia
+        "experiencia": formatar_experiencia(nova_experiencia)
     }
 
 
@@ -798,7 +841,12 @@ def detalhar_experiencia(
     db: Session = Depends(get_db)
 ):
 
-    return buscar_experiencia(experiencia_id, db)
+    experiencia = buscar_experiencia(
+        experiencia_id,
+        db
+    )
+
+    return formatar_experiencia(experiencia)
 
 
 # EDITAR EXPERIÊNCIA
@@ -833,7 +881,7 @@ def editar_experiencia(
 
     return {
         "mensagem": "Experiência atualizada com sucesso!",
-        "experiencia": experiencia
+        "experiencia": formatar_experiencia(experiencia)
     }
 
 
